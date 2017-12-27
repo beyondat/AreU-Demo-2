@@ -1,0 +1,31 @@
+<div class="thumbnail">
+	<img src="http://placehold.it/820x320">
+	<div>
+		<h4 class="pull-right">{{ recommend.pos }}</h4>
+		<h4>{{ recommend.title }}</h4>
+		<p>{{ recommend.desc }}</p>
+	</div>
+	<div class="ratings">
+		<p class="pull-right"> There's {{ recommendRankings.length }} recommendRankings</p>
+		<p>
+			<auction-stars [rating]="recommend.like"></auction-stars>
+		</p>
+	</div>
+</div>
+<div class="well" id="reviews-anchor">
+	<div class="row">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row" *ngFor="let recommendRanking of recommendRankings">
+		<hr>
+		<div class="col-md-12">
+			<h4>{{recommendRanking.title}}</h4>
+			<auction-stars class="pull-right" [rating]="recommendRanking.like"></auction-stars>
+			<h5>{{ recommendRanking.regUser }}</h5>
+			<span class="pull-right">{{ recommendRanking.regDate | date : 'shortDate' }}</span>
+			<div class="column" *ngFor="let cource of recommendRanking.cource">
+				<p>{{ cource }}</p>
+			</div>
+		</div>
+	</div>
+</div>

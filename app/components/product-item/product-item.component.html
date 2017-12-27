@@ -1,0 +1,11 @@
+<div class="thumbnail">
+	<img src="http://placehold.it/320x150">
+	<div class="caption">
+		<h4 class="pull-right">{{ recommend.pos}}</h4>
+		<h4><a [routerLink]="['/recommends', recommend.id]">{{ recommend.title }}</a></h4>
+		<p>{{ recommend.desc }}</p>
+	</div>
+	<div class="ratings">
+		<auction-stars [rating]="recommend.like"></auction-stars>
+	</div>
+</div>
