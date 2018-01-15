@@ -13,14 +13,17 @@ import StarsComponent from './components/stars/stars.component';
 import { ProductService } from './services/product.service';
 import HomeComponent from './components/home/home.component';
 import ProductDetailComponent from './components/product-detail/product-detail.component';
+import ResultComponent from './components/result/result.component';
 import { FilterPipe } from './components/pipes/filter.pipe';
 import { RecommendService } from './services/recommend.service';
+
 
 @NgModule({
 	imports : [BrowserModule, ReactiveFormsModule,
 		RouterModule.forRoot([
 			{ path : '', component : HomeComponent },
-			{ path : 'recommends/:recommendId', component : ProductDetailComponent }
+			{ path : 'recommends/:recommendId', component : ProductDetailComponent },
+			{ path : 'result/:recommendRankingId', component : ResultComponent }
 		])],
 	declarations : [ApplicationComponent,
 		CarouselComponent,
@@ -29,9 +32,11 @@ import { RecommendService } from './services/recommend.service';
 		HomeComponent,
 		ProductDetailComponent,
 		ProductItemComponent,
+		ResultComponent,
 		SearchComponent,
 		StarsComponent,
-		FilterPipe],
+		FilterPipe
+		],
 	providers : [ProductService, RecommendService,
 		{ provide : LocationStrategy, useClass : HashLocationStrategy }],
 	bootstrap : [ApplicationComponent]

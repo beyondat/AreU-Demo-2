@@ -19,7 +19,7 @@
 	<div class="row" *ngFor="let recommendRanking of recommendRankings">
 		<hr>
 		<div class="col-md-12">
-			<h4>{{recommendRanking.title}}</h4>
+			<h4><a [routerLink]="['/result',recommendRankingId]"> {{recommendRanking.title}} </a></h4>
 			<auction-stars class="pull-right" [rating]="recommendRanking.like"></auction-stars>
 			<h5>{{ recommendRanking.regUser }}</h5>
 			<span class="pull-right">{{ recommendRanking.regDate | date : 'shortDate' }}</span>
