@@ -177,6 +177,6 @@ var results = [
         airplan: "take a airplan at 3:00",
         bus: "take a 2200 bus front airport",
         walk: "you'd walk to HyupJae for 5min",
-        goal: "have a good time."
+        goal: "have a good time!!!."
     }
 ];
