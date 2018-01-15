@@ -157,6 +157,7 @@ var recommendRankings = [
     },
 ];
 
+// results 상속 구조 필요. model 역시 세분화 필요.
 var results = [
     {
         RankingId: 1,
